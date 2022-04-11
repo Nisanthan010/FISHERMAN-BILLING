@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FISHERMAN_BILLING.A_A_D_statment">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="REPORT" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="Black" FontSize="Title" HorizontalTextAlignment="Start" Margin="0,10,0,10"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                 <Frame BackgroundColor="Black" Padding="15" CornerRadius="0">
+                   <Label Text="BILL STATMENT" HorizontalTextAlignment="Center" TextColor="White" FontSize="Large"/>
+                 </Frame>
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <StackLayout  HorizontalOptions="FillAndExpand" BackgroundColor="Black">
+                    <Label Text="DATE" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HeightRequest="40" BackgroundColor="Wheat"/>
+                    <Label x:Name="Date_statement" Text="BINDING" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HeightRequest="50" FontSize="Default" BackgroundColor="Wheat"/>
+                </StackLayout>
+                <Label x:Name="final_amount" Text="BINDING" Grid.Column="1" Grid.ColumnSpan="4" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Large" BackgroundColor="Wheat"/>
+                <Label Text="PROFIT/LOSS"  Grid.Column="4" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label Text="TOTAL INCOME" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label x:Name="Total_income_amount" Text="BINDING" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label Text="TOTAL REDUCTION" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label x:Name="total_reduction_amount" Text="BINDING" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label Text="WORKER TOTAL PAY" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label x:Name="worker_total_pay_amount" Text="BINDING" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label Text="TOTAL PERSON" Grid.Row="4" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label x:Name="no_of_person" Text="BINDING" Grid.Row="4" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label Text="WORKER" Grid.Row="4" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label x:Name="worker_per_amount" Text="BINDING" Grid.Row="4" Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label Text="DRIVER" Grid.Row="4" Grid.Column="4" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                <Label x:Name="per_driver_amount" Text="BINDING" Grid.Row="4" Grid.Column="5" HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+                </Grid>
+                <Frame BackgroundColor="Black" Padding="15" CornerRadius="0">
+                <Label Text="REDUCTION STATMENT" HorizontalTextAlignment="Center" TextColor="White" FontSize="Large"/>
+                </Frame>
+                <Frame BackgroundColor="White" Padding="15" CornerRadius="0">
+                 <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                         <Label Text="Diesel" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="Black" FontSize="Large"/>
+                         <Label x:Name="diesel_amount" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="Black" FontSize="Large"/>
+                 </Grid>
+                </Frame>
+            <ScrollView VerticalScrollBarVisibility="Always" HeightRequest="200" VerticalOptions="StartAndExpand">
+                        <CollectionView x:Name="Extra_reduction_collecting" SelectionMode="None" >
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid BackgroundColor="BLUE">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Text="{Binding Extra_reduction_name__dp}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="Black" FontSize="Large"/>
+                                        <Label Text="{Binding Extra_reduction_amount_dp}" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand" TextColor="Black" FontSize="Large"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+            </ScrollView>
+            
+            <Frame BackgroundColor="Black" Padding="15" CornerRadius="0">
+                <Label Text="BILL PAYMENTS" HorizontalTextAlignment="Center" TextColor="White" FontSize="Large"/>
+            </Frame>
+            <ScrollView VerticalScrollBarVisibility="Always" HeightRequest="200" VerticalOptions="StartAndExpand">
+                        <CollectionView x:Name="Single_payment_detail_bills" SelectionMode="None" >
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid BackgroundColor="BLUE">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50"/>
+                                            <RowDefinition Height="50"/>
+                                        </Grid.RowDefinitions>
+                                        <Label x:Name="Date_collection" Text="{Binding Customer_detail_date_dp}" Grid.RowSpan="2" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+                                        <Label x:Name="Over_all_amount" Text="{Binding Overall_total_Amount}" Grid.Column="1" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="#2196F3" TextColor="White" FontSize="Default"/>
+                                       
+                                        <Label x:Name="Overall_kg_collection"  Text="{Binding Overall_total_dp} " Grid.Column="3" Grid.RowSpan="2"  FontSize="Default"  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Wheat"/>
+                                        <Label x:Name="Name_customer_detail_collection" Text="{Binding Customer_name_dp } "  Grid.Row="1" Grid.Column="1" FontSize="Default" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Wheat"/>
+                                        <Label x:Name="Product_customer_detail_collection" Text="{Binding Product_name_dp} " Grid.Row="1" Grid.Column="2" FontSize="Default" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </ScrollView>
+            </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FISHERMAN_BILLING.A_open_page"
+             NavigationPage.HasBackButton="False" >
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <Label Text="MAIN PAGE" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="Black" FontSize="Title" HorizontalTextAlignment="Start" Margin="0,10,0,10"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                <Button Text="BACK" x:Name="Back" Clicked="Back_Clicked" CornerRadius="25"  Margin="0,5,5,5" />
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Button Text="NEW BILL PAYMENT" x:Name="newBillPayment_button" Clicked="New_bill_payment"         
+                 Margin="10,0,10,20"/>
+            <Button Text="EXIST PAYMENT" x:Name="ExistPayment_button" Clicked="ExistPayment_button_Clicked"                
+                Margin="10,0,10,20"/>
+            <Button Text="EXIST PAYMENT STATMENT" x:Name="ExistPaymentstatment_button" Clicked="ExistPaymentstatment_button_Clicked"                
+               Margin="10,0,10,20"/>
+            <Button Text="DELETE" x:Name="deleteTableAll_button" Clicked="DeleteTableAll_button_Clicked"               
+                 Margin="10,0,10,20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

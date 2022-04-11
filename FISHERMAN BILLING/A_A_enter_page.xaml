@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FISHERMAN_BILLING.A_A_enter_page"
+             NavigationPage.HasBackButton="False">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <Label Text="NEW ENTRY" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="Black" FontSize="Title" HorizontalTextAlignment="Start" Margin="0,10,0,10"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                <Button Text="BACK" x:Name="Back" Clicked="Back_Clicked" CornerRadius="25"  Margin="0,5,5,5" />
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Button Text="NEW BILL" x:Name="newBill_button" Clicked="NewBill_button_Clicked"
+               Margin="10,0,10,20"/>
+            <Button Text="PAYMENT DETAIL" x:Name="DetailPayment_button" Clicked="DetailPayment_button_Clicked"
+                 Margin="10,0,10,20"/>
+            <Button Text="EXPENSIVE" x:Name="Expensive_button" Clicked="Expensive_button_Clicked"
+                Margin="10,0,10,20"/>
+            <Button Text="STATMENT" x:Name="SingleStatment_button" Clicked="SingleStatment_button_Clicked"
+                  Margin="10,0,10,20"/>
+      </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

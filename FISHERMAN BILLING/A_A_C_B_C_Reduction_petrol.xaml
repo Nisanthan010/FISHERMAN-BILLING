@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FISHERMAN_BILLING.A_A_C_B_C_Reduction_petrol">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black" Padding="20" CornerRadius="0">
+                <Label Text="PETROL" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Label Text="PETROL" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+                <Entry x:Name="Petrol_rate" Grid.Column="1"  HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+            </Grid>
+            <Button x:Name="Petrol_pay" Text="OK" Clicked="Petrol_pay_Clicked" HorizontalOptions="FillAndExpand" Padding="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

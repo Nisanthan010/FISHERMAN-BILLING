@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FISHERMAN_BILLING.A_A_B_A_add_single_kg_amoount">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="AMOUNT ENTRY" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalOptions="Start" TextColor="Black" FontSize="Title" HorizontalTextAlignment="Start" Margin="0,10,0,10"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <StackLayout>
+                    <Label Text="TOTAL KG" HorizontalTextAlignment="Start" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" TextColor="White" FontSize="20"/>
+                    <Label x:Name="Total_kg_amount"  HorizontalTextAlignment="Center"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontSize="36"/>
+                </StackLayout>
+            </Frame>
+            <Grid BackgroundColor="RoyalBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Label Text="ENTER IN RUPEES PER KG " VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="Large" BackgroundColor="Wheat" />
+                <Entry x:Name="Enter_in_rupees"  Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Keyboard="Numeric" FontSize="Large" BackgroundColor="Wheat"/>
+                <Button Text="OK" x:Name="ENTER_PER_KG_RUPEES" Grid.Column="2" Clicked="ENTER_PER_KG_RUPEES_Clicked"/>
+            </Grid>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <StackLayout>
+                    <Label Text="TOTAl AMOUNT" HorizontalTextAlignment="Start" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" TextColor="White" FontSize="20"/>
+                    <Label x:Name="convert_into_amount" HorizontalTextAlignment="Center"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontSize="36"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FISHERMAN_BILLING.A_A_C_B_A_driver_reduction">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Black" Padding="20" CornerRadius="0">
+                <Label x:Name="Employee_Total_reduction" Text="EMPLOYEE" FontAttributes="Bold" VerticalOptions="Start" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Grid BackgroundColor="Wheat">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Label Text="DRIVER" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+                <Entry x:Name="Driver_no" Grid.Column="1" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat" Keyboard="Numeric" />
+                <Label x:Name="Driver_per_amount" Grid.Column="2" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+                <Label Text="DRIVER" Grid.Row="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+                <Entry x:Name="Paid_for_drive" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat" Keyboard="Numeric"/>
+                <Label Text="/1000" Grid.Row="1" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+                <Label Text="EMPLOYEE" Grid.Row="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+                <Entry x:Name="Employee_no" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat" Keyboard="Numeric"/>
+                <Label x:Name="Employee_Per_amount" Grid.Row="2" Grid.Column="2" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+                <Label Text="EMPLOYEE" Grid.Row="3" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+                <Entry x:Name="Paid_for_emp" Grid.Row="3" Grid.Column="1" HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat" Keyboard="Numeric"/>
+                <Label Text="/1000" Grid.Row="3" Grid.Column="2" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" FontSize="Large" BackgroundColor="Wheat"/>
+            </Grid>
+            <Button x:Name="Employee_pay" Text="ADD" Clicked="Employee_pay_Clicked" HorizontalOptions="FillAndExpand" Padding="10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

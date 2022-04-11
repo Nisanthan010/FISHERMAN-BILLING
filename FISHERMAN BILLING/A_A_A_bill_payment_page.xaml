@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FISHERMAN_BILLING.A_A_A_bill_payment_page">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <Label Text="BILL" FontAttributes="Bold" VerticalTextAlignment="Center" TextColor="Black" FontSize="Title" HorizontalTextAlignment="Start" Margin="0,10,0,10"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                <Button Text="save" x:Name="Save_customer_bill" Clicked="Save_customer_bill_Clicked" CornerRadius="25"  Margin="0,5,5,5" />
+                <Button Text="Delete" x:Name="delete_kg_customer_bill" Clicked="Delete_kg_customer_bill_Clicked" CornerRadius="25"  Margin="0,5,5,5" />
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+              <Label x:Name="Bill_payment_date"  HorizontalTextAlignment="Center" TextColor="Black" FontSize="25"/>
+            
+            <Frame BackgroundColor="Black" Padding="15" CornerRadius="0">
+                <Label Text="BILL PAYMENT" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+            </Frame>
+            <Grid RowSpacing="0" ColumnSpacing="0" BackgroundColor="Blue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="50" />
+                   
+                </Grid.RowDefinitions>
+
+                <Label Text="NAME" x:Name="Name_Customer_bill" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"  FontSize="Large" TextColor="Black" BackgroundColor="Wheat" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  />
+
+                <Entry x:Name="Name_entry_customer_bill"  Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" BackgroundColor="Wheat" />
+
+                <Label Text="PRODUCT" x:Name="product_name_bill" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"  FontSize="Large" TextColor="Black" BackgroundColor="Wheat" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  />
+
+                <Entry x:Name="product_entry_customer_bill" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" BackgroundColor="Wheat"/>
+
+                <Label Text="TOTAL KG" x:Name="Total_kg_Customer_bill" Grid.Row="2" Grid.ColumnSpan="2"    HorizontalOptions="FillAndExpand"  FontSize="Large" TextColor="Black" BackgroundColor="Wheat" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  />
+
+                <Label x:Name="Total_kg_Customer_bill_data_number" Grid.Row="2"  Grid.Column="2" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" BackgroundColor="Wheat" />
+
+                <Label Text="COUNT" x:Name="count_Customer_bill" Grid.Row="3"  Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+                <Label x:Name="Customer_bill_count" Grid.Row="3"  Grid.Column="2" Grid.ColumnSpan="2"  HorizontalOptions="FillAndExpand" FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+                <Label Text=" OVER ALL TOTAL KG" x:Name="Overall_Total_kg_Customer_bill" Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand" FontSize="20" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+                <Label x:Name="Overall_entry_Total_kg_Customer_bill" Grid.Row="4"  Grid.Column="2"  Grid.ColumnSpan="2"  HorizontalOptions="FillAndExpand" FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+                <Frame Grid.Row="5" Grid.ColumnSpan="4" BackgroundColor="Black" Padding="0,5,0,5" CornerRadius="0"  >
+
+                    <Label Text="REDUCTION" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+
+                </Frame>
+
+                <Label Text="Count" x:Name="Reduction_count_name_bill" Grid.Row="6"  HorizontalOptions="FillAndExpand"  FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center"  HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+                <Entry x:Name="Reduction_count_entry_customer_bill" Grid.Row="6" Grid.Column="1" HorizontalOptions="FillAndExpand" BackgroundColor="Wheat" Keyboard="Numeric"/>
+
+                <Label Text="EXTRA" x:Name="Extra_name_bill" Grid.Row="6" Grid.Column="2"  HorizontalOptions="FillAndExpand"  FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat" />
+
+                <Entry x:Name="Extra_reduction_customer_entry_bill" Grid.Row="6" Grid.Column="3" HorizontalOptions="FillAndExpand" BackgroundColor="Wheat" Keyboard="Numeric"/>
+
+
+                <Label Text="TOTAL REDUCTION" x:Name="Total_reduction_Customer_bill" Grid.Row="7"   Grid.ColumnSpan="2"  HorizontalOptions="Fill" FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+                <Label x:Name="Total_reduction" Grid.Row="7"  Grid.Column="2" Grid.ColumnSpan="2"  HorizontalOptions="FillAndExpand" FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+
+                <Label Text="ENTER IN KG" x:Name="kg_name_bill" Grid.Row="8" Grid.ColumnSpan="2" HorizontalOptions="FillAndExpand"  FontSize="Large" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="Wheat" />
+
+                <Entry x:Name="Kg_entry_customer_bill" Grid.Row="8" Grid.Column="2"  HorizontalOptions="FillAndExpand" BackgroundColor="Wheat" Keyboard="Numeric"/>
+
+                <Button Text="OK" x:Name="Save_kg" Clicked="Save_kg_Clicked" Grid.Row="8" Grid.Column="3" VerticalOptions="FillAndExpand" />
+            </Grid>
+            <CollectionView x:Name="Kg_collection_view" SelectionChanged="Kg_collection_view_SelectionChanged" SelectionMode="Single"
+                        ItemsLayout="VerticalGrid, 3">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35" />
+                            </Grid.RowDefinitions>
+                               
+                            <Label
+                               Text="{Binding Entry_kg_pass_one }"
+                               FontAttributes="Bold"   
+                                TextColor="Black"
+                                FontSize="Large"
+                                HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                                />
+                               
+
+                            </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

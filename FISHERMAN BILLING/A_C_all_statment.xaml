@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FISHERMAN_BILLING.A_C_all_statment">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="1"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <DatePicker x:Name="date_picker" HorizontalOptions="FillAndExpand" />
+                <Button Text="Find" x:Name="find" Grid.Column="2"  Clicked="Find_Clicked" CornerRadius="25"/>
+                <Label x:Name="Date_find" Text="{Binding Source={x:Reference date_picker},Path=Date}"  Grid.Column="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  FontSize="Large" FontAttributes="Bold" VerticalOptions="FillAndExpand"/>
+            </Grid>
+            <Label x:Name="Date_fin_" IsVisible="false" Text="{Binding Source={x:Reference date_picker},Path=Date}"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center"  FontSize="Large" FontAttributes="Bold" VerticalOptions="FillAndExpand"/>
+            <CollectionView x:Name="All_payment_detail_statment" SelectionChanged="All_payment_detail_statment_SelectionChanged" SelectionMode="Single" >
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid BackgroundColor="BLUE">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Label x:Name="Date_collection" Text="{Binding Customer_detail_date_dp}" Grid.RowSpan="2" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Wheat"/>
+                            <Frame Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="#2196F3" HorizontalOptions="FillAndExpand" Padding="5" CornerRadius="0">
+                                <Label x:Name="Over_all_amount" Text="{Binding Overall_total_Amount}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="black" FontSize="Default"/>
+                            </Frame>
+                            <Label x:Name="Overall_kg_collection"  Text="{Binding Overall_total_dp} " Grid.Column="3" Grid.RowSpan="2"  FontSize="Large"  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Wheat"/>
+                            <Label x:Name="Name_customer_detail_collection" Text="{Binding Customer_name_dp } "  Grid.Row="1" Grid.Column="1" FontSize="Default" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Wheat"/>
+                            <Label x:Name="Product_customer_detail_collection" Text="{Binding Product_name_dp} " Grid.Row="1" Grid.Column="2" FontSize="Default" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Wheat"/>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
